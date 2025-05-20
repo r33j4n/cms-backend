@@ -3,9 +3,13 @@ from flask_cors import CORS
 
 from rag_engine import get_solution_from_complaint  # <- import only 1 function
 from dotenv import load_dotenv
+from auth import auth_bp
+import os
 
 load_dotenv()
 app = Flask(__name__)
+app.register_blueprint(auth_bp)
+app.config['JWT_SECRET_KEY'] = os.getenv("JWT_SECRET_KEY")
 CORS(app, resources={r"/api/*": {"origins": "*"}})  # Allow all for now, or specify your React domain
 
 
