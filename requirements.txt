@@ -1,6 +1,11 @@
 Flask==3.1.1
 flask-cors==6.0.0
 gunicorn==23.0.0
+Flask-SQLAlchemy==3.1.1
+Flask-Migrate==4.0.5
+Werkzeug==3.0.3
+PyMySQL==1.1.0
+pydantic==2.6.1
 
 PyMuPDF==1.25.5
 sentence-transformers==4.1.0
@@ -10,5 +15,6 @@ torch==2.7.0
 
 requests==2.32.3
 python-dotenv==1.1.0
+cloudinary==1.36.0
 
 langchain-text-splitters==0.3.8
